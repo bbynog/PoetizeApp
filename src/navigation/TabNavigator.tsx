@@ -7,6 +7,8 @@ import {
   ProfileStackNavigator,
 } from './StackNavigator';
 
+import { FontAwesome5, FontAwesome, Ionicons } from 'react-native-vector-icons';
+
 const Tab = createBottomTabNavigator();
 
 export const BottomTabNavigator = () => {
@@ -14,11 +16,40 @@ export const BottomTabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
+        tabBarShowLabel: false,
       }}
     >
-      <Tab.Screen name="DashboardTab" component={DashboardStackNavigator} />
-      <Tab.Screen name="WriteTab" component={WriteStackNavigator} />
-      <Tab.Screen name="ProfileTab" component={ProfileStackNavigator} />
+      <Tab.Screen
+        name="DashboardTab"
+        component={DashboardStackNavigator}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name={'clipboard-list'} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="WriteTab"
+        component={WriteStackNavigator}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name={'pencil-square-o'} color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="ProfileTab"
+        component={ProfileStackNavigator}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name={'md-person-circle-outline'}
+              color={color}
+              size={size + 4}
+            />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };

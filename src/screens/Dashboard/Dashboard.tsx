@@ -7,7 +7,7 @@ export const DashboardScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text>Halu Dashboard Screen</Text>
       <Button
-        onPress={() => navigation.navigate('PoemDetailsStack')}
+        onPress={() => navigation.navigate('PoemDetails')}
         title={'Detalhes do Poema'}
       />
     </View>

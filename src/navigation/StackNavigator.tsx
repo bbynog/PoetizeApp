@@ -14,11 +14,11 @@ export const DashboardStackNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerTitleAlign: 'center',
       }}
     >
-      <Stack.Screen name={'DashboardStack'} component={DashboardScreen} />
-      <Stack.Screen name={'PoemDetailsStack'} component={PoemDetailsScreen} />
+      <Stack.Screen name={'Dashboard'} component={DashboardScreen} />
+      <Stack.Screen name={'PoemDetails'} component={PoemDetailsScreen} />
     </Stack.Navigator>
   );
 };
@@ -27,10 +27,10 @@ export const WriteStackNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerTitleAlign: 'center',
       }}
     >
-      <Stack.Screen name={'WriteStack'} component={WriteScreen} />
+      <Stack.Screen name={'Write'} component={WriteScreen} />
     </Stack.Navigator>
   );
 };
@@ -39,10 +39,10 @@ export const ProfileStackNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerTitleAlign: 'center',
       }}
     >
-      <Stack.Screen name={'ProfileStack'} component={ProfileScreen} />
+      <Stack.Screen name={'Profile'} component={ProfileScreen} />
     </Stack.Navigator>
   );
 };
