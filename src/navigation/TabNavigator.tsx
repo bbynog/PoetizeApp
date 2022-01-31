@@ -7,7 +7,7 @@ import {
   ProfileStackNavigator,
 } from './StackNavigator';
 
-import { FontAwesome5, FontAwesome, Ionicons } from 'react-native-vector-icons';
+import { FontAwesome5, FontAwesome, Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
