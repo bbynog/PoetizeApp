@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import {
@@ -7,7 +8,14 @@ import {
   ProfileStackNavigator,
 } from './StackNavigator';
 
-import { FontAwesome5, FontAwesome, Ionicons } from '@expo/vector-icons';
+import {
+  FontAwesome5,
+  FontAwesome,
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+  Octicons,
+} from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +32,9 @@ export const BottomTabNavigator = () => {
         component={DashboardStackNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name={'clipboard-list'} color={color} size={size} />
+            // <FontAwesome5 name={'clipboard-list'} color={color} size={size} />
+            // <MaterialIcons name={'menu-book'} color={color} size={size} />
+            <Octicons name={'book'} color={color} size={size} />
           ),
         }}
       />
@@ -34,6 +44,16 @@ export const BottomTabNavigator = () => {
         options={{
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name={'pencil-square-o'} color={color} size={size} />
+            // <MaterialCommunityIcons
+            //   name={'fountain-pen'}
+            //   color={color}
+            //   size={size}
+            // />
+            // <MaterialCommunityIcons
+            //   name={'pencil-box-outline'}
+            //   color={color}
+            //   size={size}
+            // />
           ),
           tabBarHideOnKeyboard: true,
         }}

@@ -8,7 +8,6 @@ export const styles = StyleSheet.create({
   },
   bodyTextInput: {
     paddingLeft: 15,
-
     fontSize: 25,
     textAlignVertical: 'top',
   },

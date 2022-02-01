@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextStyle, TextInput } from 'react-native';
+import { useTheme } from '@react-navigation/native';
 
 import { styles } from './styles';
 
@@ -16,8 +17,18 @@ export const WriteBox = ({
   titleStyles,
   bodyStyles,
 }: WriteBoxProps) => {
-  const titleInputStyles = [styles.titleTextInput, titleStyles];
-  const bodyInputStyles = [styles.bodyTextInput, bodyStyles];
+  const { colors } = useTheme();
+
+  const titleInputStyles = [
+    styles.titleTextInput,
+    { color: colors.text },
+    titleStyles,
+  ];
+  const bodyInputStyles = [
+    styles.bodyTextInput,
+    { color: colors.text },
+    bodyStyles,
+  ];
   return (
     <>
       <TextInput onChangeText={setTitleState} style={titleInputStyles} />
