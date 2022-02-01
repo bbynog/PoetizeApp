@@ -35,6 +35,7 @@ export const BottomTabNavigator = () => {
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name={'pencil-square-o'} color={color} size={size} />
           ),
+          tabBarHideOnKeyboard: true,
         }}
       />
       <Tab.Screen

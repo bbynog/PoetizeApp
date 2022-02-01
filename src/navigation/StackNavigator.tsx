@@ -1,14 +1,14 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { DashboardScreen } from '../screens/Dashboard/Dashboard';
-import { PoemDetailsScreen } from '../screens/PoemDetails/PoemDetails';
-
-import { WriteScreen } from '../screens/Write/Write';
-import { RegularWriteScreen } from '../screens/RegularWrite/RegularWrite';
-import { FlowWriteScreen } from '../screens/FlowWrite/FlowWrite';
-
-import { ProfileScreen } from '../screens/Profile/Profile';
+import {
+  DashboardScreen,
+  PoemDetailsScreen,
+  WriteScreen,
+  RegularWriteScreen,
+  FlowWriteScreen,
+  ProfileScreen,
+} from 'screens';
 
 type WriteStackNavigatorParamList = {
   Write: undefined;
@@ -49,6 +49,7 @@ export const WriteStackNavigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerTitleAlign: 'center',
+        headerTitle: '',
       }}
     >
       <Stack.Screen name={'Write'} component={WriteScreen} />

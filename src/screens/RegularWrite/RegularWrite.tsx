@@ -1,11 +1,10 @@
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import React, { useState, useCallback } from 'react';
 import { View, BackHandler, TextInput } from 'react-native';
+import { WriteBox } from 'components';
 
-import { WriteBox } from '../../components/WriteBox/WriteBox';
-
-import { mountTextObject } from '../../utils/functions';
-
+import { mountTextObject } from 'utils';
+import { TextService } from 'services';
 import { styles } from './styles';
 
 export const RegularWriteScreen = () => {
@@ -16,9 +15,9 @@ export const RegularWriteScreen = () => {
 
   useFocusEffect(
     useCallback(() => {
-      const onBackPress = () => {
-        console.log(mountTextObject(titleText, bodyText));
+      const onBackPress = async () => {
         navigation.goBack();
+        console.log(await TextService.getAllTexts());
         return true;
       };
       BackHandler.addEventListener('hardwareBackPress', onBackPress);

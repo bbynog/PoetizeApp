@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View } from 'react-native';
 
-import { WriteBox } from '../../components/WriteBox/WriteBox';
+import { WriteBox } from 'components';
 
 import { styles } from './styles';
 

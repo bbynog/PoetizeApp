@@ -1,5 +1,12 @@
+import { TextTO } from 'types';
+
+export const generateRandomId = () => {
+  return Date.now().toString(36) + Math.random().toString(36).substring(2);
+};
+
 export const mountTextObject = (title: string, body: string) => {
   const textTO: TextTO = {
+    id: generateRandomId(),
     title,
     body,
     flow: false,

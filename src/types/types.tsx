@@ -1,13 +1,15 @@
-type TextStatus = 'complete' | 'incomplete' | 'fragment';
-type FontStyles = {
+export type TextStatus = 'complete' | 'incomplete' | 'fragment';
+
+export type FontStyles = {
   size: number;
   color: string;
   font: string;
 };
 
-type TextTO = {
+export type TextTO = {
+  id: string;
   title?: string;
-  body: string;
+  body?: string;
   flow: boolean;
   status: TextStatus;
   backgroundColor: string;
