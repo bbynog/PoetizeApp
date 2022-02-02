@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Image } from 'react-native';
+import { navigationRef } from 'services/NavigationService';
 
 import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
@@ -7,7 +8,7 @@ import { StatusBar } from 'expo-status-bar';
 import AppLoading from 'expo-app-loading';
 import { FontAwesome5, FontAwesome, Ionicons } from '@expo/vector-icons';
 
-import { BottomTabNavigator } from './navigation/TabNavigator';
+import { BottomTabNavigator } from './navigation/TabNavigator/TabNavigator';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
 import { lightTheme } from './theme';
@@ -62,7 +63,7 @@ export const Index = () => {
 
   return (
     <SafeAreaProvider>
-      <NavigationContainer theme={newLightTheme}>
+      <NavigationContainer ref={navigationRef} theme={newLightTheme}>
         <BottomTabNavigator />
       </NavigationContainer>
       <StatusBar style={'auto'} />

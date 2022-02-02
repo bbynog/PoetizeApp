@@ -10,24 +10,7 @@ import {
   ProfileScreen,
 } from 'screens';
 
-type WriteStackNavigatorParamList = {
-  Write: undefined;
-  RegularWrite: undefined;
-  FlowWrite: undefined;
-};
-
-type DashboardStackNavigatorParamList = {
-  Dashboard: undefined;
-  PoemDetails: undefined;
-};
-
-type ProfileStackNavigatorParamList = {
-  Profile: undefined;
-};
-
-type StackNavigatorParamList = WriteStackNavigatorParamList &
-  DashboardStackNavigatorParamList &
-  ProfileStackNavigatorParamList;
+import { StackNavigatorParamList } from 'navigation';
 
 const Stack = createStackNavigator<StackNavigatorParamList>();
 

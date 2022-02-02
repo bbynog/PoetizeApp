@@ -7,7 +7,7 @@ import { styles } from './styles';
 
 export const FlowWriteScreen = () => {
   const [timeCount, setTimeCount] = useState(5);
-  console.log('timeCount', timeCount);
+  console.log('flowWrite');
 
   const [bodyText, setBodyText] = useState('');
   const [titleText, setTitleText] = useState('');

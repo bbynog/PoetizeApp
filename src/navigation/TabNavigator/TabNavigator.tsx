@@ -1,12 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import {
   DashboardStackNavigator,
   WriteStackNavigator,
   ProfileStackNavigator,
-} from './StackNavigator';
+} from '../StackNavigator/StackNavigator';
+
+import { BottomTabNavigatorParamList } from 'navigation';
 
 import {
   FontAwesome5,
@@ -17,7 +18,7 @@ import {
   Octicons,
 } from '@expo/vector-icons';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
 export const BottomTabNavigator = () => {
   return (
