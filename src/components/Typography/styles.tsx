@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
+  textDefaults: {
+    fontFamily: 'open-sans-regular',
   },
 });

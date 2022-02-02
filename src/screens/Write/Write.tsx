@@ -1,33 +1,51 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { styles } from './styles';
-import { RegularButton } from 'components';
+import { RegularButton, WriteBox } from 'components';
 
 import { useNavigation } from '@react-navigation/native';
-
-import { NavigationService } from 'services';
 
 export const WriteScreen = () => {
   const navigation = useNavigation();
 
-  const regularButtonHandler = () => {
-    navigation.navigate('RegularWrite');
+  // Flow States
+  const [timeCount, setTimeCount] = useState(5);
+  const [isTicking, setIsTicking] = useState(false);
+  const [timeIsUp, setTimeIsUp] = useState(false);
+  //
+
+  const [bodyText, setBodyText] = useState('');
+  const [titleText, setTitleText] = useState('');
+
+  const onTimeEnd = (count: number) => {
+    setIsTicking(false);
+    setTimeIsUp(true);
+
+    return count;
   };
 
-  const flowButtonHandler = () => {
-    navigation.navigate('FlowWrite');
-  };
+  useEffect(() => {
+    if (!isTicking) return;
+    const id = setInterval(() => {
+      setTimeCount(count => {
+        if (count !== 0) {
+          return count - 1;
+        } else {
+          return onTimeEnd(count);
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(id);
+  }, []);
 
   const testButtonHandler = () => {
-    console.log(NavigationService.getCurrentOptions());
+    console.log('teste');
   };
 
   return (
     <View style={styles.container}>
-      <Text>Halu Write Screen</Text>
-      <RegularButton onPress={regularButtonHandler} title={'RegularWrite'} />
-      <RegularButton onPress={flowButtonHandler} title={'FlowWrite'} />
-      <RegularButton onPress={testButtonHandler} title={'Teste'} />
+      <WriteBox setBodyState={setBodyText} setTitleState={setTitleText} />
     </View>
   );
 };

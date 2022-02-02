@@ -1,27 +1,49 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import {
+  createStackNavigator,
+  StackNavigationOptions,
+} from '@react-navigation/stack';
+import { useTheme } from '@react-navigation/native';
 
 import {
-  DashboardScreen,
+  BoardScreen,
   PoemDetailsScreen,
   WriteScreen,
-  RegularWriteScreen,
-  FlowWriteScreen,
   ProfileScreen,
 } from 'screens';
 
 import { StackNavigatorParamList } from 'navigation';
 
+import { lightTheme } from 'theme';
+
 const Stack = createStackNavigator<StackNavigatorParamList>();
 
-export const DashboardStackNavigator = () => {
+const { colors } = lightTheme;
+
+const navigatorDefaultOptions: StackNavigationOptions = {
+  headerTitleAlign: 'center',
+  headerTitleStyle: {
+    fontFamily: 'honey-florist',
+    fontSize: 53,
+    color: colors.card,
+  },
+  headerStyle: {
+    backgroundColor: colors.primary,
+    height: 100,
+  },
+  headerTintColor: colors.card,
+};
+
+export const BoardStackNavigator = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerTitleAlign: 'center',
-      }}
-    >
-      <Stack.Screen name={'Dashboard'} component={DashboardScreen} />
+    <Stack.Navigator screenOptions={navigatorDefaultOptions}>
+      <Stack.Screen
+        name={'Board'}
+        component={BoardScreen}
+        options={{
+          headerTitle: '( Mural  )',
+        }}
+      />
       <Stack.Screen name={'PoemDetails'} component={PoemDetailsScreen} />
     </Stack.Navigator>
   );
@@ -29,27 +51,28 @@ export const DashboardStackNavigator = () => {
 
 export const WriteStackNavigator = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerTitleAlign: 'center',
-        headerTitle: '',
-      }}
-    >
-      <Stack.Screen name={'Write'} component={WriteScreen} />
-      <Stack.Screen name={'RegularWrite'} component={RegularWriteScreen} />
-      <Stack.Screen name={'FlowWrite'} component={FlowWriteScreen} />
+    <Stack.Navigator screenOptions={navigatorDefaultOptions}>
+      <Stack.Screen
+        name={'Write'}
+        component={WriteScreen}
+        options={{
+          headerTitle: '( Poetize-se  )',
+        }}
+      />
     </Stack.Navigator>
   );
 };
 
 export const ProfileStackNavigator = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerTitleAlign: 'center',
-      }}
-    >
-      <Stack.Screen name={'Profile'} component={ProfileScreen} />
+    <Stack.Navigator screenOptions={navigatorDefaultOptions}>
+      <Stack.Screen
+        name={'Profile'}
+        component={ProfileScreen}
+        options={{
+          headerTitle: '( Você  )',
+        }}
+      />
     </Stack.Navigator>
   );
 };

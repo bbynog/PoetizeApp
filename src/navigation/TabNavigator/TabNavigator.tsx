@@ -2,7 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import {
-  DashboardStackNavigator,
+  BoardStackNavigator,
   WriteStackNavigator,
   ProfileStackNavigator,
 } from '../StackNavigator/StackNavigator';
@@ -18,19 +18,28 @@ import {
   Octicons,
 } from '@expo/vector-icons';
 
+import { useTheme } from '@react-navigation/native';
+
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
 export const BottomTabNavigator = () => {
+  const { colors } = useTheme();
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: colors.primary,
+        },
+
+        tabBarInactiveTintColor: colors.card,
+        tabBarActiveTintColor: colors.secondary,
       }}
     >
       <Tab.Screen
-        name="DashboardTab"
-        component={DashboardStackNavigator}
+        name="BoardTab"
+        component={BoardStackNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
             // <FontAwesome5 name={'clipboard-list'} color={color} size={size} />

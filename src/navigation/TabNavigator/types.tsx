@@ -1,7 +1,7 @@
 export type BottomTabNavigatorParamList = {
-  DashboardTab: undefined;
+  BoardTab: undefined;
   WriteTab: undefined;
   ProfileTab: undefined;
 };
 
-export type TabScreensEnum = 'DashboardTab' | 'WriteTab' | 'ProfileTab';
+export type TabScreensEnum = 'BoardTab' | 'WriteTab' | 'ProfileTab';

@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './styles';
+import { Typography } from 'components';
 
 export const ProfileScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Halu Profile Screen</Text>
+      <Typography fontSize={25}>Halu Profile Screen</Typography>
     </View>
   );
 };

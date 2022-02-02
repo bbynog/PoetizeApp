@@ -1,11 +1,9 @@
 type WriteStackNavigatorParamList = {
   Write: undefined;
-  RegularWrite: undefined;
-  FlowWrite: undefined;
 };
 
-type DashboardStackNavigatorParamList = {
-  Dashboard: undefined;
+type BoardStackNavigatorParamList = {
+  Board: undefined;
   PoemDetails: undefined;
 };
 
@@ -14,13 +12,7 @@ type ProfileStackNavigatorParamList = {
 };
 
 export type StackNavigatorParamList = WriteStackNavigatorParamList &
-  DashboardStackNavigatorParamList &
+  BoardStackNavigatorParamList &
   ProfileStackNavigatorParamList;
 
-export type StackScreensEnum =
-  | 'Write'
-  | 'RegularWrite'
-  | 'FlowWrite'
-  | 'Dashboard'
-  | 'PoemDetails'
-  | 'Profile';
+export type StackScreensEnum = 'Write' | 'Board' | 'PoemDetails' | 'Profile';

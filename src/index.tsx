@@ -35,10 +35,10 @@ export const Index = () => {
 
   const newLightTheme = {
     ...DefaultTheme,
+    ...lightTheme,
     colors: {
       ...DefaultTheme.colors,
-      ...lightTheme,
-      primary: lightTheme.primary,
+      ...lightTheme.colors,
     },
   };
 
@@ -47,6 +47,11 @@ export const Index = () => {
       FontAwesome5.font,
       FontAwesome.font,
       Ionicons.font,
+      {
+        'open-sans-regular': require('../assets/fonts/OpenSans-Regular.ttf'),
+        'open-sans-bold': require('../assets/fonts/OpenSans-Bold.ttf'),
+        'honey-florist': require('../assets/fonts/HoneyFlorist.otf'),
+      },
     ]);
     await Promise.all([...fontAssets]);
   };

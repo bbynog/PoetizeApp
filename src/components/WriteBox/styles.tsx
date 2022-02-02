@@ -2,13 +2,15 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   titleTextInput: {
-    paddingLeft: 15,
+    fontFamily: 'open-sans-bold',
+    fontSize: 25,
     marginTop: 60,
-    fontSize: 35,
+    paddingLeft: 15,
   },
   bodyTextInput: {
-    paddingLeft: 15,
+    fontFamily: 'open-sans-regular',
     fontSize: 25,
     textAlignVertical: 'top',
+    paddingLeft: 15,
   },
 });

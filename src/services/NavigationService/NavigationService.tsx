@@ -40,7 +40,7 @@ class NavigationService {
   reset() {
     if (this.navigation.isReady()) {
       this.navigation.reset({
-        routes: [{ name: 'DashboardTab' }],
+        routes: [{ name: 'BoardTab' }],
       });
     }
   }

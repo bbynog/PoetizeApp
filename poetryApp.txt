@@ -1,5 +1,5 @@
 tasks:
 	-criar/implementar navigationService
 	-merge de telas regular e modo flow
-	-montar tela dashboard (mudar nome para mural ou quadro?)
+	-montar tela Board (mudar nome para mural ou quadro?)
 	
