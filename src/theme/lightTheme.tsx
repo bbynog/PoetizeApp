@@ -5,6 +5,7 @@ export const lightTheme: ExtendedTheme = {
   dark: false,
   colors: {
     primary: '#AE6DEB',
+    primaryDarker: '#8854B8',
     onPrimary: '#eceff1',
     secondary: '#FFAD00',
     background: '#e1e2e1',
@@ -19,6 +20,7 @@ declare module '@react-navigation/native' {
     dark: boolean;
     colors: {
       primary: string;
+      primaryDarker: string;
       onPrimary: string;
       secondary: string;
       background: string;

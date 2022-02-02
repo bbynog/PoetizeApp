@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './styles';
+import { Typography } from 'components';
 
 export const PoemDetailsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Halu PoemDetails Screen</Text>
+      <Typography>Halu PoemDetails Screen</Typography>
     </View>
   );
 };

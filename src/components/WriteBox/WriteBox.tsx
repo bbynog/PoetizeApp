@@ -31,12 +31,17 @@ export const WriteBox = ({
   ];
   return (
     <>
-      <TextInput onChangeText={setTitleState} style={titleInputStyles} />
+      <TextInput
+        onChangeText={setTitleState}
+        style={titleInputStyles}
+        autoCorrect={false}
+      />
       <TextInput
         onChangeText={setBodyState}
         multiline={true}
         numberOfLines={25}
         style={bodyInputStyles}
+        autoCorrect={false}
       />
     </>
   );
