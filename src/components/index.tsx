@@ -1,3 +1,4 @@
 export { WriteBox } from './WriteBox/WriteBox';
-export { RegularButton } from './RegularButton/RegularButton';
+export { GradientButton } from './GradientButton/GradientButton';
 export { Typography } from './Typography/Typography';
+export { Gradient } from './Gradient/Gradient';

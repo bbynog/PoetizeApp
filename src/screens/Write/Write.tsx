@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './styles';
-import { RegularButton, WriteBox } from 'components';
+import { WriteBox } from 'components';
 
 import { useNavigation } from '@react-navigation/native';
 

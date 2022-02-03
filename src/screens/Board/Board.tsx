@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { styles } from './styles';
-import { RegularButton, Typography } from 'components';
+import { GradientButton } from 'components';
 import { useNavigation } from '@react-navigation/native';
 
 export const BoardScreen = () => {
@@ -10,8 +10,7 @@ export const BoardScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Typography>Halu Board Screen</Typography>
-      <RegularButton
+      <GradientButton
         onPress={poemDetailsButtonHandler}
         title={'Detalhes do Poema'}
       />

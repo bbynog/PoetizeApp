@@ -71,7 +71,7 @@ export const Index = () => {
       <NavigationContainer ref={navigationRef} theme={newLightTheme}>
         <BottomTabNavigator />
       </NavigationContainer>
-      <StatusBar style={'auto'} backgroundColor={lightTheme.colors.primary} />
+      <StatusBar style={'auto'} />
     </SafeAreaProvider>
   );
 };

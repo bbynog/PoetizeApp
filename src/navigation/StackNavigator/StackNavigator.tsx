@@ -3,7 +3,8 @@ import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack';
-import { useTheme } from '@react-navigation/native';
+
+import { Gradient } from 'components';
 
 import {
   BoardScreen,
@@ -27,10 +28,7 @@ const navigatorDefaultOptions: StackNavigationOptions = {
     fontSize: 53,
     color: colors.card,
   },
-  headerStyle: {
-    backgroundColor: colors.primary,
-    height: 100,
-  },
+  headerBackground: () => <Gradient style={{ height: 95 }} />,
   headerTintColor: colors.card,
 };
 

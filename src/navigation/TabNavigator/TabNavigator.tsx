@@ -20,6 +20,8 @@ import {
 
 import { useTheme } from '@react-navigation/native';
 
+import { Gradient } from 'components';
+
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
 export const BottomTabNavigator = () => {
@@ -29,12 +31,13 @@ export const BottomTabNavigator = () => {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: {
-          backgroundColor: colors.primary,
-        },
-
         tabBarInactiveTintColor: colors.card,
         tabBarActiveTintColor: colors.secondary,
+        tabBarBackground: () => (
+          <>
+            <Gradient style={{ height: '100%' }} darkerToLighter={false} />
+          </>
+        ),
       }}
     >
       <Tab.Screen
