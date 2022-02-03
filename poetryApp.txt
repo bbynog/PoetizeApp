@@ -1,5 +1,16 @@
 tasks:
-	-criar/implementar navigationService
-	-merge de telas regular e modo flow
-	-montar tela Board (mudar nome para mural ou quadro?)
+	-implementar React Query e React Query Firebase
+
+	-implementar autenticacao firebase
 	
+	-tela Board
+		-criar poemaCard
+		-implementar com react query firebase
+
+	-tela Write
+		-criar funcionalidade de salvar text (firebase)
+	
+	-escolher de uma vez por todas: redux ou contextAPI
+
+	-DEPOIS: melhorar background do WriteBox
+				
