@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+
 import { getFirestore, Firestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -19,7 +20,7 @@ class FirebaseService {
   constructor() {
     if (!FirebaseService.instance) {
       FirebaseService.instance = this;
-      this.firestore = getFirestore();
+      this.firestore = getFirestore(app);
     }
 
     return FirebaseService.instance;

@@ -14,6 +14,8 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { lightTheme } from './theme';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { QueryClientProvider, QueryClient } from 'react-query';
+
 const cacheImages = (images: string[] | any[]) => {
   return images.map(image => {
     if (typeof image === 'string') {
@@ -29,6 +31,8 @@ const cacheImages = (images: string[] | any[]) => {
 const cacheFonts = (fonts: any[]) => {
   return fonts.map(font => Font.loadAsync(font));
 };
+
+const queryClient = new QueryClient();
 
 export const Index = () => {
   const [isAppReady, setIsAppReady] = useState(false);
@@ -67,11 +71,13 @@ export const Index = () => {
   }
 
   return (
-    <SafeAreaProvider>
-      <NavigationContainer ref={navigationRef} theme={newLightTheme}>
-        <BottomTabNavigator />
-      </NavigationContainer>
-      <StatusBar style={'auto'} />
-    </SafeAreaProvider>
+    <QueryClientProvider client={queryClient}>
+      <SafeAreaProvider>
+        <NavigationContainer ref={navigationRef} theme={newLightTheme}>
+          <BottomTabNavigator />
+        </NavigationContainer>
+        <StatusBar style={'auto'} />
+      </SafeAreaProvider>
+    </QueryClientProvider>
   );
 };
