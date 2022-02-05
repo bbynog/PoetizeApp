@@ -1,8 +1,4 @@
 tasks:
-	-implementar React Query Firebase?
-
-	-persistencia do react query
-
 	-terminar custom hooks queries
 
 	-implementar autenticacao firebase

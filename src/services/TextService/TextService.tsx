@@ -9,6 +9,10 @@ import {
   where,
   Firestore,
   CollectionReference,
+  disableNetwork,
+  getDocsFromCache,
+  getDocsFromServer,
+  enableNetwork,
 } from 'firebase/firestore';
 
 import { TextTO } from 'types';
@@ -93,18 +97,22 @@ class TextService {
 
   async getAllTexts() {
     try {
+      // await disableNetwork(this.firestore);
+
+      // await enableNetwork(this.firestore);
       const res = await getDocs(this.textColletion);
-      const allTexts: TextTO[] = [];
-      if (res) {
+
+      if (res.empty) {
+        throw 'FetchError';
+      } else {
+        const allTexts: TextTO[] = [];
         res.forEach(text => {
           allTexts.push(text.data() as TextTO);
         });
+
         return allTexts;
-      } else {
-        return null;
       }
     } catch (error) {
-      console.log('Error:', error);
       return Promise.reject(error);
     }
   }

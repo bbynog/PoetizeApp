@@ -16,6 +16,10 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { QueryClientProvider, QueryClient } from 'react-query';
 
+import { persistQueryClient } from 'react-query/persistQueryClient-experimental';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { createAsyncStoragePersistor } from 'react-query/createAsyncStoragePersistor-experimental';
+
 const cacheImages = (images: string[] | any[]) => {
   return images.map(image => {
     if (typeof image === 'string') {
@@ -32,10 +36,26 @@ const cacheFonts = (fonts: any[]) => {
   return fonts.map(font => Font.loadAsync(font));
 };
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      cacheTime: 1000 * 60 * 60 * 24, // 24 hours
+      // cacheTime: 0,
+    },
+  },
+});
+
+const asyncStoragePersistor = createAsyncStoragePersistor({
+  storage: AsyncStorage,
+});
 
 export const Index = () => {
   const [isAppReady, setIsAppReady] = useState(false);
+
+  persistQueryClient({
+    queryClient,
+    persistor: asyncStoragePersistor,
+  });
 
   const newLightTheme = {
     ...DefaultTheme,

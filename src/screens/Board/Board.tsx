@@ -23,7 +23,7 @@ export const BoardScreen = () => {
       </View>
     );
   }
-  console.log('data', data);
+  // console.log('data', data);
 
   return (
     <View style={styles.container}>
