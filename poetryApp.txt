@@ -1,14 +1,12 @@
-tasks:
-	-terminar custom hooks queries
-
-	-implementar autenticacao firebase
-	
+tasks:	
 	-tela Board
 		-criar poemaCard
-		-implementar com react query firebase
+		-implementar com react query
 
 	-tela Write
-		-criar funcionalidade de salvar text (firebase)
+		-criar funcionalidade de salvar text (firebase/react query)
+
+	-implementar autenticacao firebase
 	
 	-escolher de uma vez por todas: redux ou contextAPI
 
