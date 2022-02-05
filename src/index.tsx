@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image } from 'react-native';
+import { Image, LogBox } from 'react-native';
 import { navigationRef } from 'services/NavigationService';
 
 import { Asset } from 'expo-asset';
@@ -19,6 +19,10 @@ import { QueryClientProvider, QueryClient } from 'react-query';
 import { persistQueryClient } from 'react-query/persistQueryClient-experimental';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createAsyncStoragePersistor } from 'react-query/createAsyncStoragePersistor-experimental';
+
+// Retirar warning do uso do firebase no Android
+LogBox.ignoreLogs(['Setting a timer']);
+//
 
 const cacheImages = (images: string[] | any[]) => {
   return images.map(image => {
@@ -40,7 +44,6 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       cacheTime: 1000 * 60 * 60 * 24, // 24 hours
-      // cacheTime: 0,
     },
   },
 });

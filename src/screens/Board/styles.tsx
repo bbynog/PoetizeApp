@@ -6,5 +6,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    paddingTop: 50,
+  },
+  loadingContainer: {
+    flex: 1,
+    paddingTop: 80,
   },
 });
