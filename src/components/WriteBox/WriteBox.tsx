@@ -2,7 +2,7 @@ import React from 'react';
 import { TextStyle, TextInput } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 
-import { styles } from './styles';
+import { styles } from './WriteBox.styles';
 
 type WriteBoxProps = {
   setTitleState: (titleState: string) => void;

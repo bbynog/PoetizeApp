@@ -1,5 +1,5 @@
 export * from './TabNavigator/TabNavigator';
-export * from './TabNavigator/types';
+export * from './TabNavigator/TabNavigator.types';
 
 export * from './StackNavigator/StackNavigator';
-export * from './StackNavigator/types';
+export * from './StackNavigator/StackNavigator.types';

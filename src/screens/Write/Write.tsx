@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
-import { styles } from './styles';
+import { styles } from './Write.styles';
 import { WriteBox } from 'components';
 
 import { useNavigation } from '@react-navigation/native';

@@ -3,7 +3,7 @@ import React from 'react';
 import { Gradient } from '../Gradient/Gradient';
 import { LinearGradientPoint } from 'expo-linear-gradient';
 
-import { styles } from './styles';
+import { styles } from './GradientButton.styles';
 import { Typography } from '../Typography/Typography';
 
 interface GradientButtonProps {

@@ -6,11 +6,11 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-import { styles } from './styles';
+import { styles } from './Board.styles';
 import { GradientButton } from 'components';
 import { useNavigation, useTheme } from '@react-navigation/native';
 
-import { useGetAllTexts } from './queries';
+import { useGetAllTexts } from './Board.queries';
 
 import { NavigationService } from 'services';
 
