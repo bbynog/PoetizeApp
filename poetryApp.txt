@@ -12,3 +12,6 @@ tasks:
 
 	-DEPOIS: melhorar background do WriteBox
 				
+
+
+** talvez usar serviço de internacionalizacao pra traduzir api americana de sinonimos

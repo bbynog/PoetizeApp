@@ -8,8 +8,8 @@ export type FontStyles = {
 
 export type TextTO = {
   id: string;
-  title?: string;
-  body?: string;
+  title: string;
+  body: string;
   flow: boolean;
   status: TextStatus;
   backgroundColor: string;

@@ -12,6 +12,7 @@ interface GradientButtonProps {
   colors?: string[];
   fontColor?: string;
   style?: StyleProp<ViewStyle>;
+  gradientStyle?: StyleProp<ViewStyle>;
   start?: LinearGradientPoint;
   end?: LinearGradientPoint;
 }
@@ -20,15 +21,17 @@ export const GradientButton = ({
   title,
   onPress,
   colors,
+  gradientStyle,
   style,
   start,
   end,
   fontColor,
 }: GradientButtonProps) => {
-  const gradientStyles = [styles.gradient, style];
+  const gradientStyles = [styles.gradient, gradientStyle];
+  const containerStyles = [styles.container, style];
 
   return (
-    <View style={styles.container}>
+    <View style={containerStyles}>
       <TouchableOpacity onPress={onPress}>
         <Gradient
           style={gradientStyles}
