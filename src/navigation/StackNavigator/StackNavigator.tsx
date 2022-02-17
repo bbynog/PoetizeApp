@@ -1,10 +1,11 @@
 import React from 'react';
+
 import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack';
 
-import { Gradient } from 'components';
+import { Gradient, HeaderTitleText } from 'components';
 
 import {
   BoardScreen,
@@ -23,11 +24,6 @@ const { colors } = lightTheme;
 
 const navigatorDefaultOptions: StackNavigationOptions = {
   headerTitleAlign: 'center',
-  headerTitleStyle: {
-    fontFamily: 'honey-florist',
-    fontSize: 53,
-    color: colors.card,
-  },
   headerBackground: () => <Gradient style={{ height: 95 }} />,
   headerTintColor: colors.card,
 };
@@ -39,7 +35,7 @@ export const BoardStackNavigator = () => {
         name={'Board'}
         component={BoardScreen}
         options={{
-          headerTitle: '( Mural  )',
+          headerTitle: () => <HeaderTitleText children={' Mural  '} />,
         }}
       />
       <Stack.Screen name={'PoemDetails'} component={PoemDetailsScreen} />
@@ -54,7 +50,8 @@ export const WriteStackNavigator = () => {
         name={'Write'}
         component={WriteScreen}
         options={{
-          headerTitle: '( Poetize-se  )',
+          headerTitle: () => <HeaderTitleText children={' Poetize  '} />,
+          // headerShown: false, '( Poetize  )'
         }}
       />
     </Stack.Navigator>
@@ -68,7 +65,7 @@ export const ProfileStackNavigator = () => {
         name={'Profile'}
         component={ProfileScreen}
         options={{
-          headerTitle: '( Você  )',
+          headerTitle: () => <HeaderTitleText children={' Você  '} />,
         }}
       />
     </Stack.Navigator>

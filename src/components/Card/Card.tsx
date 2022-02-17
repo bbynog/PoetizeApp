@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { Typography } from 'components';
+import { Typography } from 'components/Typography/Typography';
 
 import { styles } from './Card.styles';
 
