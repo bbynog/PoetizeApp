@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Platform } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -13,6 +14,11 @@ export const styles = StyleSheet.create({
   },
   flatListContainer: {
     height: '100%',
+    ...Platform.select({
+      ios: {
+        paddingTop: 25,
+      },
+    }),
   },
   buttonContainer: {
     position: 'absolute',

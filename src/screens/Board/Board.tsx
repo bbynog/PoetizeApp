@@ -82,9 +82,9 @@ export const BoardScreen = () => {
         />
       </View>
 
-      <View style={styles.buttonContainer}>
+      {/* <View style={styles.buttonContainer}>
         <GradientButton onPress={resetButtonHandler} title={'Reset'} />
-      </View>
+      </View> */}
     </View>
   );
 };
