@@ -15,7 +15,6 @@ export const WriteScreen = () => {
   //
 
   const [bodyText, setBodyText] = useState('');
-  const [titleText, setTitleText] = useState('');
 
   const onTimeEnd = (count: number) => {
     setIsTicking(false);
@@ -45,7 +44,7 @@ export const WriteScreen = () => {
 
   return (
     <View style={styles.container}>
-      <WriteBox setBodyState={setBodyText} setTitleState={setTitleText} />
+      <WriteBox setTextState={setBodyText} />
     </View>
   );
 };

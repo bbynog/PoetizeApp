@@ -24,7 +24,6 @@ const textConverter: FirestoreDataConverter<TextTO> = {
   toFirestore: (text: TextTO) => {
     return {
       id: text.id,
-      title: text.title,
       body: text.body,
       flow: text.flow,
       status: text.status,
@@ -41,7 +40,6 @@ const textConverter: FirestoreDataConverter<TextTO> = {
     const data = snapshot.data(options);
     return {
       id: data.id,
-      title: data.title,
       body: data.body,
       flow: data.flow,
       status: data.status,

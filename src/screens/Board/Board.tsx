@@ -45,8 +45,6 @@ export const BoardScreen = () => {
     );
   }
 
-  console.log('body ', data && data[0]);
-
   // if (data) {
   //   const store = async (text: TextTO) => {
   //     const res = await TextService.storeText({
@@ -61,10 +59,7 @@ export const BoardScreen = () => {
   const renderItem: ListRenderItem<TextTO> = ({ item }) => {
     return (
       <View style={styles.cardContainer}>
-        <Card
-          header={item.title || item.body.slice(0, 15) + '...'}
-          body={item.body}
-        />
+        <Card body={item.body} />
       </View>
     );
   };

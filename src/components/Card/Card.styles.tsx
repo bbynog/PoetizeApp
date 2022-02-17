@@ -13,5 +13,4 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.card,
     // over,
   },
-  headerContainer: {},
 });

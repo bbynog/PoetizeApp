@@ -27,10 +27,8 @@ LogBox.ignoreLogs(['Setting a timer']);
 const cacheImages = (images: string[] | any[]) => {
   return images.map(image => {
     if (typeof image === 'string') {
-      console.log('entrou em image');
       return Image.prefetch(image);
     } else {
-      console.log('entrou no else');
       return Asset.fromModule(image).downloadAsync();
     }
   });
