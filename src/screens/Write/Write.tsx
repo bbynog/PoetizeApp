@@ -44,7 +44,7 @@ export const WriteScreen = () => {
 
   return (
     <View style={styles.container}>
-      <WriteBox setTextState={setBodyText} />
+      <WriteBox textSetter={setBodyText} autoFocus />
     </View>
   );
 };

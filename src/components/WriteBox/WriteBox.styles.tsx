@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     height: '100%',
 
     fontFamily: 'open-sans-regular',
-    fontSize: 25,
+    fontSize: 19,
     textAlignVertical: 'top',
     paddingLeft: 15,
     paddingTop: 20,

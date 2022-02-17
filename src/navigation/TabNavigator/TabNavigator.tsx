@@ -9,6 +9,8 @@ import {
 
 import { BottomTabNavigatorParamList } from 'navigation';
 
+import { Gradient } from 'components';
+
 import {
   FontAwesome5,
   FontAwesome,
@@ -20,7 +22,7 @@ import {
 
 import { useTheme } from '@react-navigation/native';
 
-import { Gradient } from 'components';
+import { Platform } from 'react-native';
 
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
 
@@ -68,7 +70,7 @@ export const BottomTabNavigator = () => {
             //   size={size}
             // />
           ),
-          tabBarHideOnKeyboard: true,
+          tabBarHideOnKeyboard: Platform.OS === 'ios' ? false : true,
         }}
       />
       <Tab.Screen
