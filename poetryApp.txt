@@ -1,17 +1,27 @@
 tasks:	
-	-tela Board
-		-criar poemaCard
-		-implementar com react query
+	- tela Board
+		- criar poemaCard
+		- implementar com react query
 
-	-tela Write
-		-criar funcionalidade de salvar text (firebase/react query)
+	- tela Write
+	    - mudar nome da tela
+		- criar funcionalidade de salvar text (firebase/react query)
+		- botoes no topo?
 
-	-implementar autenticacao firebase
+	- implementar autenticacao firebase
 	
-	-escolher de uma vez por todas: redux ou contextAPI
+	- escolher de uma vez por todas: redux ou contextAPI
 
-	-DEPOIS: melhorar background do WriteBox
-				
+	- DEPOIS: melhorar background do WriteBox
+
+	- lista de favoritos
+	
+	- função de limpar a tela de texto
+
+	- 
 
 
 ** talvez usar serviço de internacionalizacao pra traduzir api americana de sinonimos
+** procurar api de sinonimo 
+** procurar api de rima.
+** verificar a questão do aplicativo estar com modo offline

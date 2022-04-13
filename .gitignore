@@ -106,3 +106,8 @@ dist
 # Expo folders
 .expo
 .expo-shared
+
+# Key Info
+key.txt
+my-release-key.keystore
+poetizeapp.key
